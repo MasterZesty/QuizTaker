@@ -1,2 +1,2 @@
 # QuizTaker
-QuizTaker - Django based Quiz WebAp
+QuizTaker - Django based Quiz WebApp
