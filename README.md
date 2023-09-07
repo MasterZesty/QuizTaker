@@ -7,7 +7,7 @@
 
 
 <!-- PROJECT LOGO -->
-# <img src="https://github.com/MasterZesty/QuizTaker/blob/main/QuizTaker/QuizTaker/static/QuizTaker/img/quiztaker-website-logo-no-background.png" width=30%  height=20%>
+# <img src="https://github.com/MasterZesty/QuizTaker/blob/main/QuizTaker/QuizTaker/static/QuizTaker/img/quiztaker-website-logo-no-background.png" width=25%  height=25% style="background-color:white; border-radius: 5px;">
 QuizTaker - Django based Quiz WebApp
 
 <!-- ABOUT THE PROJECT -->
