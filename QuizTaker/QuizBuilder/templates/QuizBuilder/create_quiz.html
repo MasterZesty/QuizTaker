@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>QuizTaker - Home</title>
+      <!-- Include Tailwind CSS CDN or link to your compiled CSS file -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+   </head>
+   <body class="bg-violet-600">
+  
+        <!-- Button to add a new question -->
+        <button id="add_question" class="border-solid bg-white px-5 py-2.5 rounded-lg m-5">Add Question</button>
+        <button id="delete_all" class="border-solid bg-white px-5 py-2.5 rounded-lg m-5">Delete All</button>
+
+        <!-- Quiz Heading -->
+                    
+        <div class="m-2 p-2 border-2 border-green-400 bg-slate-50 rounded-bl-lg rounded-tr-lg p-2">
+            <h6>This is quiz heading</h6>
+        </div>
+
+        <!--Quiz Question Section -->
+
+        <div class="w-full sm:w-3/4 lg:w-3/5 mx-auto text-xl lg:text-2xl xl:text-3xl">
+            
+            <!-- Content container -->
+            <div id="questions-container">
+
+            <!-- questions go here -->
+            
+            </div>
+        </div>
+
+        <!-- Create Quiz-->
+        <button id="create_quiz" class="border-solid bg-white px-5 py-2.5 rounded-lg m-5">Create Quiz</button>
+    
+        <script>
+
+            //keep track of no of question added
+            let questionCount = 0;
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // Function to add a new question and options
+                function addQuestion() {
+                    
+                    // Get all required input elements
+                    const errorMessage = document.getElementById("question_" + questionCount.toString());
+                    //console.log(errorMessage);
+                    const requiredInputs = document.querySelectorAll('[required]');
+                    let missingFields = [];
+
+                    // Check each required input element for value
+                    requiredInputs.forEach(function (input) {
+                        if (!input.value) {
+                            missingFields.push(input.name);
+                        }
+                    });
+
+                    // Display error message if fields are missing
+                    if (missingFields.length > 0) {
+                        const errorMessageText = `Please fill in the following required fields: ${missingFields.join(', ')} !`;
+                        const errorMessageDiv = document.createElement("p");
+                        errorMessageDiv.classList.add("errorMessage");
+                        errorMessageDiv.classList.add("text-red-600", "w-full", "rounded-t-lg","p-2", "text-sm", "font-semibold", "leading-none");
+                        errorMessageDiv.textContent = errorMessageText;
+                        //console.log(errorMessageDiv);
+                        errorMessage.appendChild(errorMessageDiv);
+                        return ""
+                    }
+
+                    // Increment the count
+                    questionCount++;
+                    
+                    // Create a new question div
+                    const newQuestionDiv = document.createElement("div");
+                    const questionId = questionCount.toString();
+                    //console.log(questionId);
+                    qDivId = "question_" + questionId
+                    newQuestionDiv.setAttribute("id", qDivId);
+                    newQuestionDiv.classList.add("question", "bg-slate-50", "m-2", "p-4", "rounded-lg");
+    
+                    // Create a text input for the question
+                    const newQuestionTitleDiv = document.createElement("div");
+                    const questionInput = document.createElement("textarea");
+                    questionInput.classList.add("bg-whie", "w-full", "rounded-t-lg","p-2","mb-2", "text-xl", "font-semibold", "leading-none", "text-black", "placeholder-green-500");
+                    questionInput.type = "text";
+                    questionInput.placeholder = "Enter your question";
+                    questionInput.setAttribute("required", "true");
+                    questionInput.setAttribute("name", "Question Title");
+                    newQuestionTitleDiv.appendChild(questionInput);
+                    newQuestionDiv.appendChild(newQuestionTitleDiv);
+    
+                    // Create text inputs for options (four options)
+                    for (let i = 1; i <= 4; i++) {
+                        const optionInput = document.createElement("textarea");
+                        optionInput.type = "text";
+                        const placeholder = 'Option ' + String.fromCharCode(64 + i); // Convert 0, 1, 2, 3 to 'a', 'b', 'c', 'd'
+                        optionInput.placeholder = placeholder;
+                        optionInput.classList.add("bg-white", "w-full", "rounded-t-lg","p-2", "text-sm", "font-semibold", "leading-none", "placeholder-indigo-500");
+                        optionInput.setAttribute("required", "true");
+                        optionInput.setAttribute("name", placeholder);
+                        newQuestionDiv.appendChild(optionInput);
+                    }
+
+                    // remove error msgs
+                    const errors = document.getElementsByClassName("errorMessage");
+
+                    // Loop through error msgs
+                    for (let i = errors.length - 1; i >= 0; i--) {
+                        errors[i].remove();
+                    }
+    
+                    // Create a deleteButton button element
+                    const deleteButton = document.createElement("button");
+                    deleteButton.classList.add("bg-red-500", "w-1/8", "h-full", "rounded","p-2", "text-xl", "leading-none", "m-2");
+                    //deleteButton.textContent = "Delete";
+
+                    // Create an SVG element
+                    const svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    svgElement.setAttribute("class", "w-4 h-4");
+                    svgElement.setAttribute("aria-hidden", "true");
+                    svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+                    svgElement.setAttribute("fill", "none");
+                    svgElement.setAttribute("viewBox", "0 0 14 14");
+
+                    // Create the path element within the SVG element
+                    const pathElement = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    pathElement.setAttribute("stroke", "currentColor");
+                    pathElement.setAttribute("stroke-linecap", "round");
+                    pathElement.setAttribute("stroke-linejoin", "round");
+                    pathElement.setAttribute("stroke-width", "2");
+                    pathElement.setAttribute("d", "m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6");
+
+                    // Append the path element to the SVG element
+                    svgElement.appendChild(pathElement);
+
+                    // Append the SVG element to the deleteButton
+                    deleteButton.appendChild(svgElement);
+
+                    deleteButton.addEventListener("click", function () {
+                    // Remove the question when the delete button is clicked
+                        newQuestionDiv.remove();
+                    });
+                    newQuestionDiv.appendChild(deleteButton);
+    
+                    // Append the new question div to the questions container
+                    const questionsContainer = document.getElementById("questions-container");
+                    questionsContainer.appendChild(newQuestionDiv);
+                    
+                }
+    
+                // Attach a click event listener to the "Add Question" button
+                const addButton = document.getElementById("add_question");
+                addButton.addEventListener("click", addQuestion);
+
+                // Function to delete/clear all question and options
+                function deleteAllQuestion() {
+
+                    const questions = document.getElementsByClassName("question");
+
+                    // Loop through and remove elements with the class name "question"
+                    for (let i = questions.length - 1; i >= 0; i--) {
+                        questions[i].remove();
+                    }
+
+                    // reset the count
+                    questionCount = 0;
+
+                }
+
+                // Attach a click event listener to the "Add Question" button
+                const deleteButton = document.getElementById("delete_all");
+                deleteButton.addEventListener("click", deleteAllQuestion);
+
+                // Function to createQuiz
+                function createQuiz() {
+                    console.log("sedning created quiz to server !")
+                    return ''
+
+                }
+
+                // Attach a click event listener to the "Create Quiz" button
+                const CreateQuizButton = document.getElementById("create_quiz");
+                CreateQuizButton.addEventListener("click", createQuiz);
+                
+            });
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+    </body>
+</html>

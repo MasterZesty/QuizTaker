@@ -23,4 +23,6 @@ app_name = 'quizbuilder'
 urlpatterns = [
     path("quiz/", views.quiz, name="quizbuilder_quiz"),
     path("dashboard/", views.dashboard, name="quizbuilder_dashboard"),
+    path("create/", views.create, name="quizbuilder_create"),
+
 ]
