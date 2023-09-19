@@ -1,341 +1,479 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>QuizTaker - Home</title>
-      <!-- Include Tailwind CSS CDN or link to your compiled CSS file -->
-      <script src="https://cdn.tailwindcss.com"></script>
-   </head>
-   <body class="bg-gradient-to-r from-sky-500 to-indigo-500">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>QuizTaker - Home</title>
 
-    <!-- Quiz Heading -->
-    <div class= "m-2 p-2 border-2 border-green-400 bg-slate-50 rounded-bl-lg rounded-tr-lg p-2">
-      <h6>This is quiz headig </h6>
-    </div>
+		<!-- Include Tailwind CSS CDN or link to your compiled CSS file -->
+		<script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Quiz Questions -->
-    <div class= "">
+        <!-- FlowBite include via CDN -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
 
-      <!-- quiz question 1 -->
-      <div class="bg-white m-2 p-2">
-         <!-- question -->
-         <div class="bg-green-400 rounded-t-lg p-2">
-            <h1 class="text-base font-semibold leading-none">
-            While Americans wait in a line, Brits tend to form which of these?
-            <h1>
-         </div>
-         <!-- answers -->
-         <div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
-            <ul class="">
-               <!-- option 1 -->
-               <li>
-                  <div>
-                     <input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required>
-                     <label for="quiz_option1" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="text-base font-normal leading-none">
-                           <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                           <div class=""></div>
-                        </div>
-                     </label>
-                  </div>
-               </li>
-               <!-- option 2-->
-               <li>
-                  <div>
-                     <input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required>
-                     <label for="quiz_option2" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="text-base font-normal leading-none">
-                           <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                           <div class=""></div>
-                        </div>
-                     </label>
-                  </div>
-               </li>
-               <!-- option3 -->
-               <li>
-                  <div>
-                     <input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required>
-                     <label for="quiz_option3" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="text-base font-normal leading-none">
-                           <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                           <div class=""></div>
-                        </div>
-                     </label>
-                  </div>
-               </li>
-               <!-- option 4 -->
-               <li>
-                  <div>
-                     <input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required>
-                     <label for="quiz_option4" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                        <div class="text-base font-normal leading-none">
-                           <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                           <div class=""></div>
-                        </div>
-                     </label>
-                  </div>
-               </li>
-            </ul>
-         </div>
-      </div>
+	</head>
+    
+	<body class="bg-white">
 
-      <!-- quiz question 2 -->
-      <div class="bg-white m-2 p-2">
-        <!-- question -->
-        <div class="bg-green-400 rounded-t-lg p-2">
-           <h1 class="text-base font-semibold leading-none">
-           While Americans wait in a line, Brits tend to form which of these?
-           <h1>
-        </div>
-        <!-- answers -->
-        <div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
-           <ul class="">
-              <!-- option 1 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required>
-                    <label for="quiz_option1" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option 2-->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required>
-                    <label for="quiz_option2" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option3 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required>
-                    <label for="quiz_option3" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option 4 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required>
-                    <label for="quiz_option4" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-           </ul>
-        </div>
-      </div>
+		<!-- Sidenavbar For Quetion Navigation -->
 
-      <!-- quiz question 3 -->
-      <div class="bg-white m-2 p-2">
-        <!-- question -->
-        <div class="bg-green-400 rounded-t-lg p-2">
-           <h1 class="text-base font-semibold leading-none">
-           While Americans wait in a line, Brits tend to form which of these?
-           <h1>
-        </div>
-        <!-- answers -->
-        <div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
-           <ul class="">
-              <!-- option 1 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required>
-                    <label for="quiz_option1" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option 2-->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required>
-                    <label for="quiz_option2" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option3 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required>
-                    <label for="quiz_option3" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option 4 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required>
-                    <label for="quiz_option4" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-           </ul>
-        </div>
-      </div>
+		<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+			<span class="sr-only">Open sidebar</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        clip-rule="evenodd"
+                        fill-rule="evenodd"
+                        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                    </path>
+                </svg>
+		</button>
 
-      <!-- quiz question 4 -->
-      <div class="bg-white m-2 p-2">
-        <!-- question -->
-        <div class="bg-green-400 rounded-t-lg p-2">
-           <h1 class="text-base font-semibold leading-none">
-           While Americans wait in a line, Brits tend to form which of these?
-           <h1>
-        </div>
-        <!-- answers -->
-        <div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
-           <ul class="">
-              <!-- option 1 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required>
-                    <label for="quiz_option1" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option 2-->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required>
-                    <label for="quiz_option2" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option3 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required>
-                    <label for="quiz_option3" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option 4 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required>
-                    <label for="quiz_option4" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-           </ul>
-        </div>
-      </div>
+		<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+			<div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
 
-      <!-- quiz question 5-->
-      <div class="bg-white m-2 p-2">
-        <!-- question -->
-        <div class="bg-green-400 rounded-t-lg p-2">
-           <h1 class="text-base font-semibold leading-none">
-           While Americans wait in a line, Brits tend to form which of these?
-           <h1>
-        </div>
-        <!-- answers -->
-        <div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
-           <ul class="">
-              <!-- option 1 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required>
-                    <label for="quiz_option1" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option 2-->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required>
-                    <label for="quiz_option2" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option3 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required>
-                    <label for="quiz_option3" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-              <!-- option 4 -->
-              <li>
-                 <div>
-                    <input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required>
-                    <label for="quiz_option4" class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                       <div class="text-base font-normal leading-none">
-                          <div class="">Lorem ipsum dolor sit amet, consectetur</div>
-                          <div class=""></div>
-                       </div>
-                    </label>
-                 </div>
-              </li>
-           </ul>
-        </div>
-      </div>
+                <div>
+                    <p class="flex-1 ml-3 whitespace-nowrap text-2xl p-2 mb-2">Quiz Questions</p>
+                </div>
 
-    </div>
-   
+                <div class="grid grid-flow-row grid-cols-3">
 
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">1</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">2</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">4</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">5</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">6</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">7</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">8</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">9</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">10</span>
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center justify-center w-10 h-10 p-3 m-3 text-xl font-medium text-white bg-green-400 rounded-full dark:bg-blue-900 dark:text-blue-300">11</span>
+                    </div>
+	
+                    <button type="button" class="fixed bottom-0 left-0 ml-6 mr-6 mb-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                        <h1 class="">Submit Quiz</h1>
+                    </button>
 
-   </body>
+			</div>
+		</aside>
+
+		<div class="px-2 py-4 sm:ml-64">
+			<div class="bg-white">
+
+				<!--Quiz Section -->
+
+				<div class="w-full sm:w-3/4 lg:w-1/2 mx-auto text-xl lg:text-2xl xl:text-3xl">
+					
+                    <!-- Quiz Heading -->
+					<div class="m-2 p-2 border-2 border-green-400 bg-slate-50 rounded-bl-lg rounded-tr-lg p-2">
+						<h6>This is quiz headig</h6>
+					</div>
+
+					<!-- Quiz Questions -->
+					<div class="">
+						<!-- quiz question 1 -->
+						<div class="bg-white m-2 p-2">
+							<!-- question -->
+							<div class="bg-green-400 rounded-t-lg p-2">
+								<h1 class="text-base font-semibold leading-none">
+									While Americans wait in a line, Brits tend to form which of these?
+								</h1>
+							</div>
+
+							<!-- answers -->
+							<div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
+								<ul class="">
+									<!-- option 1 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required />
+											<label
+												for="quiz_option1"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 2-->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required />
+											<label
+												for="quiz_option2"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option3 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required />
+											<label
+												for="quiz_option3"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 4 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required />
+											<label
+												for="quiz_option4"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- quiz question 2 -->
+						<div class="bg-white m-2 p-2">
+							<!-- question -->
+							<div class="bg-green-400 rounded-t-lg p-2">
+								<h1 class="text-base font-semibold leading-none">
+									While Americans wait in a line, Brits tend to form which of these?
+								</h1>
+							</div>
+							<!-- answers -->
+							<div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
+								<ul class="">
+									<!-- option 1 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required />
+											<label
+												for="quiz_option1"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 2-->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required />
+											<label
+												for="quiz_option2"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option3 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required />
+											<label
+												for="quiz_option3"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 4 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required />
+											<label
+												for="quiz_option4"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- quiz question 3 -->
+						<div class="bg-white m-2 p-2">
+							<!-- question -->
+							<div class="bg-green-400 rounded-t-lg p-2">
+								<h1 class="text-base font-semibold leading-none">
+									While Americans wait in a line, Brits tend to form which of these?
+								</h1>
+							</div>
+							<!-- answers -->
+							<div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
+								<ul class="">
+									<!-- option 1 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required />
+											<label
+												for="quiz_option1"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 2-->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required />
+											<label
+												for="quiz_option2"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option3 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required />
+											<label
+												for="quiz_option3"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 4 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required />
+											<label
+												for="quiz_option4"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- quiz question 4 -->
+						<div class="bg-white m-2 p-2">
+							<!-- question -->
+							<div class="bg-green-400 rounded-t-lg p-2">
+								<h1 class="text-base font-semibold leading-none">
+									While Americans wait in a line, Brits tend to form which of these?
+								</h1>
+							</div>
+							<!-- answers -->
+							<div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
+								<ul class="">
+									<!-- option 1 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required />
+											<label
+												for="quiz_option1"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 2-->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required />
+											<label
+												for="quiz_option2"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option3 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required />
+											<label
+												for="quiz_option3"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 4 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required />
+											<label
+												for="quiz_option4"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- quiz question 5-->
+						<div class="bg-white m-2 p-2">
+							<!-- question -->
+							<div class="bg-green-400 rounded-t-lg p-2">
+								<h1 class="text-base font-semibold leading-none">
+									While Americans wait in a line, Brits tend to form which of these?
+								</h1>
+							</div>
+							<!-- answers -->
+							<div class="border-2 border-green-400 bg-slate-50 rounded-b-lg p-2">
+								<ul class="">
+									<!-- option 1 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option1" name="hosting" value="quiz_option1" class="hidden peer" required />
+											<label
+												for="quiz_option1"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 2-->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option2" name="hosting" value="quiz_option2" class="hidden peer" required />
+											<label
+												for="quiz_option2"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option3 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option3" name="hosting" value="quiz_option3" class="hidden peer" required />
+											<label
+												for="quiz_option3"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<!-- option 4 -->
+									<li>
+										<div>
+											<input type="radio" id="quiz_option4" name="hosting" value="quiz_option4" class="hidden peer" required />
+											<label
+												for="quiz_option4"
+												class="inline-flex items-center justify-between w-full p-2 mt-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+											>
+												<div class="text-base font-normal leading-none">
+													<div class="">Lorem ipsum dolor sit amet, consectetur</div>
+													<div class=""></div>
+												</div>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <!--  FlowBite JavaScript via CDN.-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+	</body>
 </html>
