@@ -59,15 +59,28 @@
                     });
 
                     // Display error message if fields are missing
+                        
                     if (missingFields.length > 0) {
+
                         const errorMessageText = `Please fill in the following required fields: ${missingFields.join(', ')} !`;
-                        const errorMessageDiv = document.createElement("p");
-                        errorMessageDiv.classList.add("errorMessage");
-                        errorMessageDiv.classList.add("text-red-600", "w-full", "rounded-t-lg","p-2", "text-sm", "font-semibold", "leading-none");
-                        errorMessageDiv.textContent = errorMessageText;
-                        //console.log(errorMessageDiv);
-                        errorMessage.appendChild(errorMessageDiv);
-                        return ""
+                        const errorMessageDiv = document.querySelector(".errorMessage"); // Check if error message element already exists
+                            
+                            if (errorMessageDiv) {
+                                    // Update the existing error message element
+                                    errorMessageDiv.textContent = errorMessageText;
+                                    return
+                                } 
+                                
+                            else {
+                                    // Create a new error message element
+                                    const newErrorMessageDiv = document.createElement("p");
+                                    newErrorMessageDiv.classList.add("errorMessage");
+                                    newErrorMessageDiv.classList.add("text-red-600", "w-full", "rounded-t-lg", "p-2", "text-sm", "font-semibold", "leading-none");
+                                    newErrorMessageDiv.textContent = errorMessageText;
+                                    errorMessage.appendChild(newErrorMessageDiv);
+                                    return
+                                }
+
                     }
 
                     // Increment the count
