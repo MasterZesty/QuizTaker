@@ -11,61 +11,77 @@
    </head>
    <body class="bg-violet-600">
 
-        <div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
-            <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
-                <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                    <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
-                    </svg>
-                    <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">Home</span>
-                </button>
-                <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                    <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z"/>
-                        <path d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z"/>
-                    </svg>
-                    <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">Wallet</span>
-                </button>
-                <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                    <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/>
-                    </svg>
-                    <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">Settings</span>
-                </button>
-                <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                    <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
-                    </svg>
-                    <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">Profile</span>
-                </button>
-            </div>
-        </div>
-
-  
-        <!-- Button to add a new question -->
-        <button id="add_question" class="border-solid bg-white px-5 py-2.5 rounded-lg m-5">Add Question</button>
-        <button id="delete_all" class="border-solid bg-white px-5 py-2.5 rounded-lg m-5">Delete All</button>
-
-        <!-- Quiz Heading -->
-                    
-        <div class="m-2 p-2 border-2 border-green-400 bg-slate-50 rounded-bl-lg rounded-tr-lg p-2">
-            <h6>This is quiz heading</h6>
-        </div>
-
         <!--Quiz Question Section -->
 
-        <div class="w-full sm:w-3/4 lg:w-3/5 mx-auto text-xl lg:text-2xl xl:text-3xl">
+        <div class="w-full sm:w-3/4 lg:w-3/5 mx-auto text-xl lg:text-2xl xl:text-3xl bg-grey-600">
+
+            <!-- Quiz Heading -->
+                        
+            <div id="id_quiz_heading" class="m-2 p-2 border-2 bg-slate-50 rounded-bl-lg rounded-lg">
+                <textarea placeholder="This is Quiz Heading" class="bg-white w-full rounded-t-lg p-2 font-bold leading-none placeholder-indigo-500" required="true" name="quiz_heading"></textarea>
+            </div>
             
             <!-- Content container -->
-            <div id="questions-container">
+            <div id="questions_container">
 
-            <!-- questions go here -->
+                <!-- questions go here -->
             
+            </div>
+
+            <div class="font-semibold">
+
+                <!-- Add Question Button -->
+                <div class="">
+                <button id="add_question" class="text-sm border-solid bg-white px-5 py-2.5 rounded-lg mr-2 ml-2 mt-4 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span>New Question</span>
+                </button>
+                </div>
+
+                <!-- Create Quiz Button -->
+                <div>
+                <button id="create_quiz" class="text-sm border-solid bg-white px-5 py-2.5 rounded-lg mr-2 ml-2 mt-4 flex items-center space-x-2">
+                    <svg height="25px" viewBox="0 0 512 512" width="25px" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M256.8,160c-25.7,0-49.8,10-67.9,28.1c-18.1,18.1-28.1,42.2-28.1,67.9s10,49.7,28.1,67.9C207,342,231.2,352,256.8,352   c25.7,0,49.8-10,67.9-28.1c18.1-18.1,28.1-42.2,28.1-67.9s-10-49.7-28.1-67.9C306.6,170,282.5,160,256.8,160z M256.8,336   c-44.3,0-80-35.9-80-80c0-44.1,35.7-80,80-80c44.3,0,80,35.9,80,80C336.8,300.1,301.1,336,256.8,336z"/><path d="M424.5,216h-15.2c-12.4,0-22.8-10.4-22.8-23.2c0-6.4,2.7-12.1,7.5-16.4l9.8-9.6c9.7-9.6,9.7-25.2,0-34.9l-22.3-22.1   c-4.4-4.4-10.9-7-17.5-7c-6.6,0-13,2.6-17.5,7l-9.4,9.4c-4.5,5-10.7,7.7-17.2,7.7c-12.8,0-23.7-10.4-23.7-22.7V89.1   c0-13.5-10.5-25.1-24-25.1h-30.4C228,64,217,75.5,217,89.1v15.2c0,12.3-10.6,22.7-23.4,22.7c-6.4,0-12.2-2.7-16.6-7.4l-9.7-9.6   c-4.4-4.5-10.9-7-17.5-7s-13,2.6-17.5,7L110,132c-9.6,9.6-9.6,25.3,0,34.8l9.4,9.4c5,4.5,7.8,10.2,7.8,16.7   c0,12.8-10.4,23.2-22.8,23.2H89.2C75.5,216,64,227.2,64,240.8V256v15.2c0,13.5,11.5,24.8,25.2,24.8h15.2   c12.4,0,22.8,10.4,22.8,23.2c0,6.4-2.8,12.3-7.8,16.8l-9.4,9.2c-9.6,9.6-9.6,25.2,0,34.8l22.3,22.2c4.4,4.5,10.9,7,17.5,7   c6.6,0,13-2.6,17.5-7l9.7-9.6c4.2-4.7,10.1-7.4,16.5-7.4c12.8,0,23.4,10.4,23.4,22.7v15.2c0,13.5,11,25.1,24.7,25.1h30.4   c13.6,0,24.9-11.5,24.9-25.1v-15.2c0-12.3,10.5-22.7,23.3-22.7c6.4,0,12.3,2.8,16.9,7.7l9.4,9.4c4.5,4.4,10.9,7,17.5,7   c6.6,0,13-2.6,17.5-7l22.3-22.2c9.6-9.6,9.6-25.3,0-34.9l-9.8-9.6c-4.8-4.3-7.5-10.4-7.5-16.7c0-12.8,10.4-23.6,22.8-23.6h15.2   c13.6,0,23.3-10.3,23.3-23.9V256v-15.2C447.8,227.2,438.1,216,424.5,216z M432,256v15.1c0,4.2-2.3,7.9-7.3,7.9h-15.2   c-10.3,0-20.1,4.4-27.5,12c-7.3,7.5-11.3,17.4-11.3,27.8c0,10.8,4.4,20.8,12.5,28.2l9.5,9.4c3.3,3.4,3.3,9,0,12.3l-22.3,22.2   c-1.6,1.5-3.9,2.4-6.3,2.4c-2.4,0-4.8-0.9-6.3-2.4l-9.1-9.1c-7.7-8.1-17.8-12.6-28.5-12.6c-10.4,0-20,4-27.5,11.2   c-7.6,7.4-11.6,17.1-11.6,27.5v15.2c0,4.9-4.3,9.1-8.9,9.1h-30.4c-4.6,0-8.7-4.2-8.7-9.1v-15.2c0-10.3-4.1-20.1-11.7-27.5   c-7.5-7.2-17.3-11.2-27.6-11.2c-10.6,0-20.8,4.5-28.1,12.4l-9.3,9.3c-1.6,1.5-3.9,2.4-6.3,2.4c-2.4,0-4.8-0.8-6.1-2.2l-0.1-0.1   l-0.1-0.1l-22.3-22.2c-3.3-3.3-3.3-8.8,0-12.2l9.1-9c8.2-7.6,12.7-17.7,12.7-28.5c0-10.4-4-19.9-11.3-27.4   c-7.4-7.6-17.2-11.5-27.5-11.5H89.2c-5,0-9.2-4.3-9.2-8.8V256v-15.2c0-4.5,4.2-8.8,9.2-8.8h15.2c10.3,0,20.1-3.9,27.5-11.5   c7.3-7.5,11.3-17.2,11.3-27.5c0-10.8-4.5-20.9-12.7-28.4l-9.2-9.1c-2.2-2.2-2.5-4.7-2.5-6.1c0-1.3,0.3-3.9,2.5-6.1l22.2-22.1   c1.6-1.5,3.9-2.4,6.3-2.4c2.4,0,4.8,0.8,6.1,2.2l0.1,0.1l0.1,0.1l9.4,9.4c7.4,8,17.4,12.4,28.1,12.4c10.4,0,20.1-4,27.6-11.2   c7.6-7.4,11.8-17.1,11.8-27.5V89.1c0-4.9,4-9.1,8.5-9.1H272c4.5,0,8,4.2,8,9.1v15.2c0,10.3,4.4,20.1,12,27.5   c7.5,7.2,17.4,11.2,27.8,11.2c10.8,0,21-4.5,28.6-12.6l9.1-9.1c1.6-1.5,3.9-2.4,6.3-2.4c2.4,0,4.8,0.9,6.3,2.3l22.3,22.1   c1.6,1.6,2.6,3.8,2.6,6.1c0,2.3-0.9,4.5-2.5,6.1l-9.5,9.4c-8,7.4-12.5,17.4-12.5,28.2c0,10.4,4,19.9,11.3,27.4   c7.4,7.6,17.2,11.5,27.5,11.5h15.2c5.4,0,7.4,5,7.5,9V256z">
+                    </svg>
+                    <span>Create Quiz</span>
+                    <div role="status" id="create_quiz_spinner" class="hidden">
+                        <svg aria-hidden="true" class="w-6 h-6 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                        </svg>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </button>
+                </div>
+
+                <!-- Button to add a new question -->
+                <div>
+                    <button id="delete_all" class="text-sm border-solid bg-white px-5 py-2.5 rounded-lg mr-2 ml-2 mt-4 flex items-center space-x-2">
+                        <svg height="25px" viewBox="0 0 512 512" width="25px" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="M444.852,66.908h-99.339V47.04c0-21.943-17.792-39.736-39.736-39.736h-99.339   c-21.944,0-39.736,17.793-39.736,39.736v19.868H67.363v19.868h20.47l19.887,377.489c0,21.944,17.792,39.736,39.736,39.736h218.546   c21.944,0,39.736-17.792,39.736-39.736l19.538-377.489h19.577V66.908z M186.57,47.04c0-10.962,8.926-19.868,19.868-19.868h99.339   c10.962,0,19.868,8.906,19.868,19.868v19.868H186.57V47.04z M385.908,463.236l-0.039,0.505v0.524   c0,10.943-8.906,19.868-19.868,19.868H147.455c-10.942,0-19.868-8.925-19.868-19.868v-0.524l-0.019-0.523L107.72,86.776h297.669   L385.908,463.236z" fill="#37404D"/><rect fill="#37404D" height="317.885" width="19.868" x="246.173" y="126.511"/><polygon fill="#37404D" points="206.884,443.757 186.551,126.493 166.722,127.753 187.056,445.017  "/><polygon fill="#37404D" points="345.649,127.132 325.82,125.891 305.777,443.776 325.606,445.017  "/>
+                            </g>
+                        </svg>
+                        <span>Delete All</span>
+                    </button>
+                </div>
+
             </div>
         </div>
 
-        <!-- Create Quiz-->
-        <button id="create_quiz" class="border-solid bg-white px-5 py-2.5 rounded-lg m-5">Create Quiz</button>
+        <!-- Popup Modal -->
+        <div id="popup" class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center hidden">
+            <div class="bg-white rounded p-4 max-w-sm">
+                <p class="text-lg font-semibold mb-2 text-red-500">Error! Add questions to your quiz</p>
+                <p class="mb-4 text-sm">Please add at least one question to your quiz.</p>
+                <button id="closePopup" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Close
+                </button>
+            </div>
+        </div>
     
         <script>
 
@@ -73,13 +89,24 @@
             let questionCount = 0;
 
             document.addEventListener("DOMContentLoaded", function () {
+
+                //popup for no question added
+                const popup = document.getElementById("popup");
+                const closePopupButton = document.getElementById("closePopup");
+
+                //quiz create spinner
+                const create_quiz_spinner = document.getElementById("create_quiz_spinner");
+
                 // Function to add a new question and options
                 function addQuestion() {
                     
                     // Get all required input elements
                     const errorMessage = document.getElementById("question_" + questionCount.toString());
                     //console.log(errorMessage);
-                    const requiredInputs = document.querySelectorAll('[required]');
+                    const questionsContainer_check = document.getElementById('questions_container');
+                    const requiredInputs = questionsContainer_check.querySelectorAll('[required]');
+
+                    //const requiredInputs = document.querySelectorAll('[required]');
                     let missingFields = [];
 
                     // Check each required input element for value
@@ -190,8 +217,14 @@
                     newQuestionDiv.appendChild(deleteButton);
     
                     // Append the new question div to the questions container
-                    const questionsContainer = document.getElementById("questions-container");
+                    const questionsContainer = document.getElementById("questions_container");
                     questionsContainer.appendChild(newQuestionDiv);
+
+                      // Find the target element you want to scroll to (e.g., another element with an id)
+                      const scroll_to_button = document.getElementById("add_question"); // Change "targetElementId" to your actual target element id
+                      
+                      // Scroll to the target element smoothly
+                      scroll_to_button.scrollIntoView({ behavior: "smooth" });
                     
                 }
     
@@ -203,6 +236,8 @@
                 function deleteAllQuestion() {
 
                     const questions = document.getElementsByClassName("question");
+                    const heading_textarea = document.querySelector('div#id_quiz_heading textarea[name="quiz_heading"]');
+                    heading_textarea.value = ""
 
                     // Loop through and remove elements with the class name "question"
                     for (let i = questions.length - 1; i >= 0; i--) {
@@ -220,19 +255,78 @@
 
                 // Function to createQuiz
                 function createQuiz() {
-                    console.log("sedning created quiz to server !")
+                //var x = document.getElementById("myTextarea").value;
+                //console.log("sedning created quiz to server !")
+
+                // Create an array to store the questions and options
+                const quizData = [];
+
+                const heading = document.querySelector('textarea[name="quiz_heading"]').value;
+                const headObject = {
+                    heading
+                };
+                quizData.push(headObject);
+
+                // Find all question containers (assuming multiple questions can be created)
+                const questionContainers = document.querySelectorAll(".question");
+
+                // Loop through each question container
+                questionContainers.forEach((container, index) => {
+                // Find the question and options within the container
+                const question = container.querySelector('textarea[name="Question Title"]').value;
+                const optionA = container.querySelector('textarea[name="Option A"]').value;
+                const optionB = container.querySelector('textarea[name="Option B"]').value;
+                const optionC = container.querySelector('textarea[name="Option C"]').value;
+                const optionD = container.querySelector('textarea[name="Option D"]').value;
+
+                // Create an object for the current question
+                const questionObject = {
+                    question,
+                    options: {
+                    A: optionA,
+                    B: optionB,
+                    C: optionC,
+                    D: optionD,
+                    },
+                };
+
+                // Add the question object to the quizData array
+                quizData.push(questionObject);
+                });
+
+                // Convert the quizData array to JSON
+                const quizDataJSON = JSON.stringify(quizData, null, 2);
+
+                // Print the JSON to the console
+                //console.log(quizDataJSON);
+
+                if (quizData.length <= 1) {
+                    popup.style.display = "flex";       
+                    //throw new Error("Array length must be greater than 1.");
                     return ''
+                  }
+                
+                create_quiz_spinner.style.display = "flex";
+                return ''
 
                 }
 
                 // Attach a click event listener to the "Create Quiz" button
                 const CreateQuizButton = document.getElementById("create_quiz");
                 CreateQuizButton.addEventListener("click", createQuiz);
+
+                closePopupButton.addEventListener("click", function () {
+                    // Close the popup when the "Close" button is clicked
+                    popup.style.display = "none";
+                });
                 
             });
         </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+    <!-- Include Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
     </body>
 </html>
