@@ -92,7 +92,7 @@
             document.addEventListener("DOMContentLoaded", function () {
 
                 //create quiz endpoint
-                const createQuizUrlParam = "{% url 'quizbuilder:quizbuilder_create_quiz' %}";
+                const createQuizUrlParam = "{% url 'quizbuilder:quizbuilder_create' %}";
                 const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
                 //popup for no question added

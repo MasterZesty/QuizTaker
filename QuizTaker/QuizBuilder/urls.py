@@ -21,6 +21,11 @@ from . import views
 app_name = 'quizbuilder'
 
 urlpatterns = [
+
+    path("login/", views.login, name="quizbuilder_login"),
+    path("logout/", views.logout, name="quizbuilder_logout"),
+    path("signup/", views.signup, name="quizbuilder_signup"),
+
     path("quiz/", views.quiz, name="quizbuilder_quiz"),
     path("dashboard/", views.dashboard, name="quizbuilder_dashboard"),
     path("create/", views.create_quiz, name="quizbuilder_create"),

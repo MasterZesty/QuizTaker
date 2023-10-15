@@ -5,6 +5,16 @@ from .quiz_builder_api import api_create_quiz
 from django.views.decorators.csrf import csrf_exempt
 
 
+def signup(request):
+    return render(request=request,template_name="QuizBuilder/signup.html")
+
+def login(request):
+    return render(request=request,template_name="QuizBuilder/login.html")
+
+def logout(request):
+    return render(request=request,template_name="QuizBuilder/signup.html")
+
+
 def quiz(request):
     #return HttpResponse("Hello, world. You"re at the quiz.")
     return render(request=request,template_name="QuizBuilder/take_quiz.html")

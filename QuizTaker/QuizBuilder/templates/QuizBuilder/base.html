@@ -1,0 +1,51 @@
+
+<!-- base html templte for all website (not for webapp) html files -->
+
+{% load static %}
+
+{% csrf_token %}
+
+<!-- display message -->
+{% if messages %}
+    <ul class="messages mb-0">
+        {% for message in messages %}
+        <div  {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            <div class="alert alert-success alert-dismissible mb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>New message!</strong> {{ message }}
+              </div>
+        </div>
+        
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>{% block title %}QuizTaker - Home{% endblock %}</title>
+      <!-- Include Tailwind CSS CDN or link to your compiled CSS file -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+      <script type="text/javascript" src="{% static 'QuizBuilder/js/navbar.js' %}"></script>
+   </head>
+
+   <body>
+
+        <div id="navbar">
+            {% block navbar %}{% endblock %}
+        </div>
+
+        <div id="body">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div id="footer">
+            {% block footer %}{% endblock %}
+        </div>
+
+    </body>
+</html>
