@@ -26,6 +26,15 @@ urlpatterns = [
     path("logout/", views.logout, name="quizbuilder_logout"),
     path("signup/", views.signup, name="quizbuilder_signup"),
 
+
+    path("home/", views.home, name="quizbuilder_home"),
+    path("quizzes/", views.quizzes, name="quizbuilder_quizzes"),
+    path("pricing/", views.pricing, name="quizbuilder_pricing"),
+    path("about/", views.about, name="quizbuilder_about"),
+    path("contact/", views.contact, name="quizbuilder_contact"),
+
+
+
     path("quiz/", views.quiz, name="quizbuilder_quiz"),
     path("dashboard/", views.dashboard, name="quizbuilder_dashboard"),
     path("create/", views.create_quiz, name="quizbuilder_create"),

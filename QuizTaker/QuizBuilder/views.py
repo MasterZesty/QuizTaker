@@ -4,6 +4,20 @@ import json
 from .quiz_builder_api import api_create_quiz
 from django.views.decorators.csrf import csrf_exempt
 
+def home(request):
+    return render(request=request,template_name="QuizBuilder/home.html")
+
+def quizzes(request):
+    return render(request=request,template_name="QuizBuilder/quizzes.html")
+
+def pricing(request):
+    return render(request=request,template_name="QuizBuilder/pricing.html")
+
+def about(request):
+    return render(request=request,template_name="QuizBuilder/about.html")
+
+def contact(request):
+    return render(request=request,template_name="QuizBuilder/contact.html")
 
 def signup(request):
     return render(request=request,template_name="QuizBuilder/signup.html")
@@ -13,7 +27,6 @@ def login(request):
 
 def logout(request):
     return render(request=request,template_name="QuizBuilder/signup.html")
-
 
 def quiz(request):
     #return HttpResponse("Hello, world. You"re at the quiz.")
