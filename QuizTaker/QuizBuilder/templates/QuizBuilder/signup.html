@@ -18,6 +18,10 @@
             <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2 round-xl">
                 <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
                     <h1 class="mb-8 text-3xl text-center">Sign up</h1>
+                    <form action="{% url 'quizbuilder:quizbuilder_signup' %}" method="post">
+                    
+                    {% csrf_token %}
+
                     <input 
                         type="text"
                         class="block border border-grey-light w-full p-3 rounded mb-4"
@@ -45,6 +49,8 @@
                         type="submit"
                         class="w-full text-center text-xl py-3 rounded-xl bg-blue-600 text-white hover:bg-violet-700 focus:outline-none my-1"
                     >Create Account</button>
+
+                    </form>
         
                     <div class="text-center text-sm text-grey-dark mt-4">
                         by signing up, you agree to the 

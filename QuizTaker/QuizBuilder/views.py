@@ -1,7 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 import json
-from .quiz_builder_api import api_create_quiz
+from .api_quiz_builder import api_create_quiz, api_create_user
 from django.views.decorators.csrf import csrf_exempt
 
 def home(request):
@@ -19,7 +19,24 @@ def about(request):
 def contact(request):
     return render(request=request,template_name="QuizBuilder/contact.html")
 
+@csrf_exempt
 def signup(request):
+    if request.method == "POST":
+        print(request.POST)
+        
+        try:
+            data = json.loads(request.body.decode("utf-8"))
+
+        except json.JSONDecodeError:
+            response_data = {}
+            response_data["status"] = "error"
+            response_data["message"] = "please provide valid json"
+            return JsonResponse(response_data)
+
+        print(data)
+        # response_data = api_create_user(data)
+        print(request.POST)
+
     return render(request=request,template_name="QuizBuilder/signup.html")
 
 def login(request):

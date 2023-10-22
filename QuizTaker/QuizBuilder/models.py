@@ -18,11 +18,15 @@ class BaseModel(models.Model):
 class User(BaseModel):
     email = models.EmailField(unique=True, max_length=255, null=False)
     name  = models.CharField(max_length=65, null=False)
+    password = models.CharField(max_length=100, null=False)
     user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, null=False, db_column='user_id')
 
     class Meta:
         verbose_name_plural = "Users"
         db_table = "quiz_builder_users"
+
+    def __str__(self):
+        return f'{self.name}'
 
 class Quiz(BaseModel):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_id')
@@ -34,6 +38,10 @@ class Quiz(BaseModel):
     class Meta:
         verbose_name_plural = "Quizs"
         db_table = "quiz_builder_quiz"
+
+    
+    def __str__(self):
+        return f'{self.quiz_title}'
 
 class QuizQuestion(BaseModel):
     quiz_id = models.ForeignKey(Quiz, on_delete=models.CASCADE, db_column='quiz_id')
@@ -48,3 +56,7 @@ class QuizQuestion(BaseModel):
     class Meta:
         verbose_name_plural = "Quiz Questions"
         db_table = "quiz_builder_quiz_question"
+
+    def __str__(self):
+        return f'{self.question}'
+

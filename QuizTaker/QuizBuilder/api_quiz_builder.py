@@ -1,6 +1,7 @@
 
 from .models import User, Quiz, QuizQuestion
 from uuid import uuid4
+from typing import Dict
 
 def api_create_quiz(data, email):
     '''
@@ -54,3 +55,36 @@ def api_get_user_id(email):
     user_id = User.objects.get(email=email)
     return user_id
 
+
+def api_create_user(user_details: Dict[str, str]):
+    '''
+    create user in db
+    '''
+    email = user_details.get('email','')
+    name = user_details.get('name','')
+    password = user_details.get('password','')
+
+    if email != '' and name != '':
+        try:
+            user = User(email=email, name= name, password=password)
+            user.save()
+
+        except Exception as e:
+            response_data = {"status": "failure", "message": str(e)}
+            return response_data
+
+        response_data = {}
+        response_data["status"] = "success"
+        response_data["message"] = "user created successfully"
+
+        return response_data
+
+    response_data = {}
+    response_data["status"] = "error"
+    response_data["message"] = "invalid user data"
+
+    return response_data
+
+    
+
+    
